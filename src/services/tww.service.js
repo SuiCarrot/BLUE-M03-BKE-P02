@@ -52,7 +52,7 @@ const findLordByIdService = (id) => {
 };
 
 const createLordService = (newLord) => {
-  newLord.id = twwLegendaryLords.lenght + 1;
+  newLord.id = twwLegendaryLords.length + 1;
   twwLegendaryLords.push(newLord);
   return newLord;
 };
