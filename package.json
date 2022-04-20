@@ -1,0 +1,29 @@
+{
+  "name": "blue-m03-bke-p01",
+  "version": "1.0.0",
+  "description": "Projeto 01 do módulo 03 do curso de Backend na Blue Edtech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuiCarrot/BLUE-M03-BKE-P01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuiCarrot/BLUE-M03-BKE-P01/issues"
+  },
+  "homepage": "https://github.com/SuiCarrot/BLUE-M03-BKE-P01#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
