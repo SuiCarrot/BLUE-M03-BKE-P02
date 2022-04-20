@@ -1,4 +1,4 @@
-const twwLegendaryLords = [
+/* const twwLegendaryLords = [
   {
     id: 1,
     lordName: 'Emperor Karl Franz',
@@ -41,7 +41,7 @@ const twwLegendaryLords = [
     race: 'Vampire Coast',
     img: './assets/images/noctilus.png',
   },
-];
+]; */
 
 const findLordsService = () => {
   return twwLegendaryLords;
