@@ -1,4 +1,3 @@
-
 const LegLord = require('../models/LegLords');
 
 const findLordsService = async () => {
@@ -14,7 +13,7 @@ const createLordService = async (newLord) => {
 };
 
 const updateLordService = async (id, lordEdited) => {
-  return await LegLord.findByIdAndUpdate(id,lordEdited);
+  return await LegLord.findByIdAndUpdate(id, lordEdited);
 };
 
 const deleteLordService = async (id) => {

@@ -14,5 +14,4 @@ function connectToDatabase() {
     });
 }
 
-
 module.exports = connectToDatabase;
