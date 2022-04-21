@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "625f5c85c9e8e24d3cb97763"
+  },
+  "lordName": "Emperor Karl Franz",
+  "faction": "The Empire",
+  "race": "The Empire",
+  "img": "./assets/images/karl-franz.png"
+},{
+  "_id": {
+    "$oid": "625f5d49c9e8e24d3cb97765"
+  },
+  "lordName": "Vlad von Carstein",
+  "faction": "Von Carstein",
+  "race": "Vampire Counts",
+  "img": "./assets/images/vlad.png"
+},{
+  "_id": {
+    "$oid": "625f5d69c9e8e24d3cb97766"
+  },
+  "lordName": "Belegar Ironhammer",
+  "faction": "Clan Angrund",
+  "race": "Dwarfs",
+  "img": "./assets/images/belegar.png"
+},{
+  "_id": {
+    "$oid": "625f5d81c9e8e24d3cb97767"
+  },
+  "lordName": "Skarsnik",
+  "faction": "Crooked Moon",
+  "race": "Greenskins",
+  "img": "./assets/images/skarsnik.png"
+},{
+  "_id": {
+    "$oid": "625f5d96c9e8e24d3cb97768"
+  },
+  "lordName": "Lokhir Fellheart",
+  "faction": "The Blessed Dread",
+  "race": "Dark Elves",
+  "img": "./assets/images/lokir.png"
+},{
+  "_id": {
+    "$oid": "625f5db3c9e8e24d3cb97769"
+  },
+  "lordName": "Count Noctilus",
+  "faction": "Dreadfleet",
+  "race": "Vampire Coast",
+  "img": "./assets/images/noctilus.png"
+}]

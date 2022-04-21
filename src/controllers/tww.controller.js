@@ -1,22 +1,23 @@
+const mongoose = require('mongoose');
 const lordsService = require('../services/tww.service.js');
 
-const findLordsController = (req, res) => {
-  res.send(lordsService.findLordsService());
+const findLordsController = async (req, res) => {
+  res.send(await lordsService.findLordsService());
 };
 
-const findLordByIdController = (req, res) => {
-  if (!req.params.id) {
-    return res.status(400).send({ message: 'ID not informed!' });
+const findLordByIdController = async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    return res.status(400).send({ message: 'ID invalid!' });
   }
 
-  if (!lordsService.findLordByIdService(req.params.id)) {
+  if (!await lordsService.findLordByIdService(req.params.id)) {
     return res.status(404).send({ message: 'Legendary Lord not found!' });
   }
 
-  res.send(lordsService.findLordByIdService(req.params.id));
+  res.send(await lordsService.findLordByIdService(req.params.id));
 };
 
-const createLordController = (req, res) => {
+const createLordController = async (req, res) => {
   if (
     !req.body ||
     !req.body.lordName ||
@@ -29,13 +30,18 @@ const createLordController = (req, res) => {
     });
   }
 
-  res.send(lordsService.createLordService(req.body));
+  res.send(await lordsService.createLordService(req.body));
 };
 
-const updateLordController = (req, res) => {
-  if (!lordsService.findLordByIdService(req.params.id)) {
-    return res.status(404).send({ message: 'Legendary Lord not found!' });
+const updateLordController = async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    return res.status(400).send({ message: 'Invalid ID!' });
+  };
+
+  if(!await lordsService.findLordByIdService(req.params.id)){
+  return res.status(404).send({ message: 'Legendary Lord not found!' });
   }
+
   if (
     !req.body ||
     !req.body.lordName ||
@@ -47,15 +53,18 @@ const updateLordController = (req, res) => {
       message: "You didn't fill in all the data to add the Legendary Lord.",
     });
   }
-  res.send(lordsService.updateLordService(+req.params.id, req.body));
+  res.send(await lordsService.updateLordService(req.params.id, req.body));
 };
 
-const deleteLordController = (req, res) => {
-  if (!lordsService.findLordByIdService(req.params.id)) {
-    return res.status(404).send({ message: 'Legendary Lord not found!' });
+const deleteLordController = async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    return res.status(400).send({ message: 'Invalid ID!' });
+  }
+  if(!await lordsService.findLordByIdService(req.params.id)){
+  return res.status(404).send({ message: 'Legendary Lord not found!' });
   }
 
-  lordsService.deleteLordService(req.params.id);
+  await lordsService.deleteLordService(req.params.id);
   res.send({ message: 'Legendary Lord sucessfully deleted!' });
 };
 
